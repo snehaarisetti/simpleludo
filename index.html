@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUDO 🎲</title>
+    <style>
+      .main {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .board {
+        background: url(images/board.png) no-repeat;
+        background-size: cover;
+        width: 675px;
+        height: 670px;
+        margin-left: 375px;
+        margin-top: 50px;
+      }
+
+      .board .button {
+        margin: 0;
+        position: absolute;
+        top: 48.5%;
+        left: 48.5%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      .button {
+        border: 2px solid grey;
+        width: 250px;
+        padding: 24px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 25px;
+      }
+      .button:hover {
+        cursor: pointer;
+        background-color: gray;
+        border: none;
+      }
+
+      .board .turn {
+        font-size: 25px;
+        width: 248px;
+        text-align: center;
+        border: 0.5px solid grey;
+      }
+      .turn {
+        margin: 0;
+        position: absolute;
+        top: 38.5%;
+        left: 48.5%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .dice {
+        font-size: 25px;
+        width: 248px;
+        text-align: center;
+        border: 0.5px solid grey;
+      }
+      .dice {
+        margin: 0;
+        position: absolute;
+        top: 58.5%;
+        left: 48.5%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .la {
+        width: 200px;
+        height: 125px;
+        border: 0.5px solid grey;
+        text-align: center;
+        background-color: indianred;
+      }
+      .la {
+        margin: 0;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+      }
+      .lb {
+        width: 200px;
+        height: 125px;
+        border: 0.5px solid grey;
+        text-align: center;
+        background-color: rgb(126, 200, 243);
+      }
+      .lb {
+        margin: 0;
+        position: absolute;
+        top: 80%;
+        left: 80%;
+      }
+
+      #Atoken1 {
+        font-size: 25px;
+        height: 83.75px;
+        width: 85.355px;
+        position: absolute;
+        top: 90px;
+        left: 90px;
+        text-align: center;
+      }
+
+      #Atoken2 {
+        font-size: 25px;
+        height: 83.75px;
+        width: 85.355px;
+        position: absolute;
+        top: 90px;
+        left: 175px;
+        text-align: center;
+      }
+
+      #Btoken1 {
+        font-size: 25px;
+        height: 83.75px;
+        width: 85.355px;
+        position: absolute;
+        top: 685px;
+        left: 1200px;
+        text-align: center;
+      }
+
+      #Btoken2 {
+        font-size: 25px;
+        height: 83.75px;
+        width: 85.355px;
+        position: absolute;
+        top: 685px;
+        left: 1275px;
+        text-align: center;
+      }
+      .player {
+        font-style: normal;
+      }
+    </style>
+    <script src="Ludo.js"></script>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="board">
+        <button class="button" onclick="dieRoll()">ROLL !</button>
+        <div class="turn">
+          <p>TURN: PLAYER <em class="player" id="player">A</em></p>
+        </div>
+        <div class="dice">
+          <p id="demo">You Rolled</p>
+        </div>
+      </div>
+      <div class="la">
+        <h2>Locker for A</h2>
+      </div>
+      <div class="lb">
+        <h2>Locker for B</h2>
+      </div>
+      <div class="token" id="Atoken1" onclick="moveToken('A', 1);">1A</div>
+      <div class="token" id="Atoken2" onclick="moveToken('A', 2);">1A</div>
+      <div class="token" id="Btoken1" onclick="moveToken('B', 1);">1B</div>
+      <div class="token" id="Btoken2" onclick="moveToken('B', 2);">1B</div>
+    </div>
+  </body>
+</html>
